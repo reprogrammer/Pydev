@@ -13,6 +13,8 @@ package org.python.pydev.parser;
 
 import org.python.pydev.core.log.Log;
 
+import edu.illinois.keshmesh.annotations.EntryPoint;
+
 public class ParsingThread extends Thread {
     boolean okToGo;
     boolean force = false;
@@ -31,6 +33,7 @@ public class ParsingThread extends Thread {
         this.argsToReparse = argsToReparse;
     }
 
+    @EntryPoint
     public void run() {
         try {
             if(force == false){

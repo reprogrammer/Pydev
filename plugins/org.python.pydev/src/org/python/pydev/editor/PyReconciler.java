@@ -40,6 +40,8 @@ import org.eclipse.ui.texteditor.spelling.SpellingService;
 import org.python.pydev.core.IPythonPartitions;
 import org.python.pydev.core.log.Log;
 
+import edu.illinois.keshmesh.annotations.EntryPoint;
+
 /**
  * Based on SpellingReconcileStrategy.
  * 
@@ -211,6 +213,7 @@ public class PyReconciler implements IReconcilingStrategy, IReconcilingStrategyE
     /*
      * @see org.eclipse.jface.text.reconciler.IReconcilingStrategy#reconcile(org.eclipse.jface.text.IRegion)
      */
+    @EntryPoint
     public void reconcile(IRegion region) {
         IAnnotationModel annotationModel = fViewer.getAnnotationModel();
         
