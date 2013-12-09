@@ -6,14 +6,17 @@ package org.python.pydev.editor.codecompletion.revisited;
 import java.net.URI;
 import java.util.Map;
 
+import org.eclipse.core.resources.FileInfoMatcherDescription;
 import org.eclipse.core.resources.IContainer;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IMarker;
+import org.eclipse.core.resources.IPathVariableManager;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IProjectDescription;
 import org.eclipse.core.resources.IProjectNature;
 import org.eclipse.core.resources.IResource;
+import org.eclipse.core.resources.IResourceFilterDescription;
 import org.eclipse.core.resources.IResourceProxy;
 import org.eclipse.core.resources.IResourceProxyVisitor;
 import org.eclipse.core.resources.IResourceVisitor;
@@ -486,6 +489,56 @@ public class ProjectStub implements IProject {
 	public void setHidden(boolean isHidden) throws CoreException {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public IResourceFilterDescription createFilter(int type,
+			FileInfoMatcherDescription matcherDescription, int updateFlags,
+			IProgressMonitor monitor) throws CoreException {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public IResourceFilterDescription[] getFilters() throws CoreException {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public IPathVariableManager getPathVariableManager() {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public boolean isHidden(int options) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public boolean isVirtual() {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public boolean isTeamPrivateMember(int options) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void setDerived(boolean isDerived, IProgressMonitor monitor)
+			throws CoreException {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void loadSnapshot(int options, URI snapshotLocation,
+			IProgressMonitor monitor) throws CoreException {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void saveSnapshot(int options, URI snapshotLocation,
+			IProgressMonitor monitor) throws CoreException {
+		throw new UnsupportedOperationException();
 	}
 
 }
