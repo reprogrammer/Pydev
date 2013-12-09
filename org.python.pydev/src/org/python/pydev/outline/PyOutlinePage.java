@@ -37,6 +37,8 @@ import org.python.pydev.parser.jython.SimpleNode;
 import org.python.pydev.plugin.PydevPlugin;
 import org.python.pydev.ui.UIConstants;
 
+import edu.illinois.keshmesh.annotations.EntryPoint;
+
 /**
  * Outline page, displays the structure of the document in the editor window. 
  *
@@ -168,6 +170,7 @@ public class PyOutlinePage extends ContentOutlinePage implements IShowInTarget, 
 	/**
 	 * called when a single item changes
 	 */
+	@EntryPoint
 	public void updateItems(Object[] items) {
         try {
         	unlinkAll();
